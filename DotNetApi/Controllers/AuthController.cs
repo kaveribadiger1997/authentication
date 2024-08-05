@@ -11,9 +11,9 @@ namespace DotNetApi.Controllers
         public IActionResult Login([FromBody] LoginRequest request)
         {
             // logic
-            if (request.Username == "kaveri" && request.Password == "password")
+            if (request.Username == "kaveri" && request.Password == "password") // default username and password, other than these it will always shows error
             {
-                return Ok(new { Token = "YourJWTToken" }); // Example response
+                return Ok(new { Token = "kaveri@123" }); // Example response
             }
             return Unauthorized();
         }

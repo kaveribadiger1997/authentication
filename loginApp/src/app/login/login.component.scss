@@ -1,56 +1,56 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  /* Optional: set a base font */
+/* Container to center and adjust the form position */
+.form-container {
+  margin-top: 150px;
+  /* Adjust this value to move the form further down */
 }
 
-/* Center the container using Flexbox */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  /* Full viewport height */
+/* General form styling */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-/* Style the form */
-.login-form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  padding: 20px;
+div {
+  margin-bottom: 1em;
+}
+
+label {
+  margin-bottom: .5em;
+  color: #333333;
+  display: block;
+}
+
+input {
   border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
-
-/* Style the form elements */
-.login-form div {
-  margin-bottom: 15px;
-}
-
-.login-form label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.login-form input {
-  padding: 10px;
+  padding: .5em;
+  font-size: 1em;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-.login-form button {
-  padding: 10px 20px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
+button {
+  padding: 0.7em;
   color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: .5em;
   font-weight: bold;
+  font-size: 0.9em;
 }

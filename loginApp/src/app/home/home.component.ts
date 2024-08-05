@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  // Any logic related to the home page can go here
 }
 
 

@@ -4,11 +4,12 @@ import { Router } from '@angular/router';
 import { LoginRequest } from '../models/login-request';
 import { LoginResponse } from '../models/login-response';
 import { AuthService } from '../authService';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
@@ -27,20 +28,25 @@ export class LoginComponent {
         username: form.value.username,
         password: form.value.password
       };
+      //form to get input values from html
 
       this.authService.login(loginRequest).subscribe(
         (response: LoginResponse) => {
           console.log('Login successful', response);
           this.authService.saveToken(response.token);
-          // Redirect to home page or another protected route
+          // redirect to home page
           this.router.navigate(['/home']);
         },
         (error: any) => {
           console.error('Login failed', error);
           this.errorMessage = 'Invalid username or password. Please try again.'; // Set the error message
-          // Handle login failure
+          //login failure
         }
       );
+    }
+    else {
+      this.errorMessage = 'Please fill in all required fields.';
+      //error message shows when username or password is empty
     }
   }
 }
