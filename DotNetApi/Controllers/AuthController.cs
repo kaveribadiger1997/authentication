@@ -10,8 +10,8 @@ namespace DotNetApi.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
-            // Implement your login logic here
-            if (request.Username == "testuser" && request.Password == "testpassword")
+            // logic
+            if (request.Username == "kaveri" && request.Password == "password")
             {
                 return Ok(new { Token = "YourJWTToken" }); // Example response
             }
